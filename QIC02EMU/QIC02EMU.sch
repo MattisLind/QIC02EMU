@@ -1366,10 +1366,10 @@ $EndComp
 Text Notes 5250 5750 0    50   ~ 0
 The standard symbol in the \nkicad library for 74LS241 is wrong. \nPin 19 as non-inverted sense.
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0106
 U 1 1 62F9AC75
 P 4000 5150
-F 0 "#PWR?" H 4000 5000 50  0001 C CNN
+F 0 "#PWR0106" H 4000 5000 50  0001 C CNN
 F 1 "+5V" H 4015 5323 50  0000 C CNN
 F 2 "" H 4000 5150 50  0001 C CNN
 F 3 "" H 4000 5150 50  0001 C CNN
@@ -1386,10 +1386,64 @@ Wire Wire Line
 	4550 5300 4550 5800
 Wire Wire Line
 	4550 5800 5150 5800
-Wire Wire Line
-	2250 2500 1900 2500
-Text Label 2000 2500 0    50   ~ 0
+Text Label 2150 1250 0    50   ~ 0
 TR_EN
 Text Label 4450 2000 0    50   ~ 0
 TR_EN
+$Comp
+L 74xGxx:74LVC1G04 U4
+U 1 1 630D9060
+P 1750 1250
+F 0 "U4" H 1725 1517 50  0000 C CNN
+F 1 "74LVC1G04" H 1725 1426 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1750 1250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 1750 1250 50  0001 C CNN
+	1    1750 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1250 1350 1250
+Wire Wire Line
+	2000 1250 2450 1250
+NoConn ~ 2250 2500
+Text Label 1150 1250 0    50   ~ 0
+IDIR
+$Comp
+L Device:R_Small R7
+U 1 1 63123A54
+P 1350 950
+F 0 "R7" H 1409 996 50  0000 L CNN
+F 1 "68k" H 1409 905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1350 950 50  0001 C CNN
+F 3 "~" H 1350 950 50  0001 C CNN
+	1    1350 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR019
+U 1 1 63123BAF
+P 1350 850
+F 0 "#PWR019" H 1350 700 50  0001 C CNN
+F 1 "+5V" H 1365 1023 50  0000 C CNN
+F 2 "" H 1350 850 50  0001 C CNN
+F 3 "" H 1350 850 50  0001 C CNN
+	1    1350 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1050 1350 1250
+Connection ~ 1350 1250
+Wire Wire Line
+	1350 1250 1150 1250
+$Comp
+L power:VCC #PWR?
+U 1 1 6313D1C0
+P 1750 7250
+F 0 "#PWR?" H 1750 7100 50  0001 C CNN
+F 1 "VCC" H 1767 7423 50  0000 C CNN
+F 2 "" H 1750 7250 50  0001 C CNN
+F 3 "" H 1750 7250 50  0001 C CNN
+	1    1750 7250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
