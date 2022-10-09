@@ -749,7 +749,7 @@ Wire Wire Line
 	3050 1900 3050 1850
 Connection ~ 3050 1900
 Wire Wire Line
-	3650 7200 3650 6900
+	3650 7000 3650 6900
 $Comp
 L power:+3.3V #PWR06
 U 1 1 6318B2E1
@@ -1208,10 +1208,6 @@ F 3 "~" H 3750 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 7000 4800 7000
-Wire Wire Line
-	3650 7200 4800 7200
-Wire Wire Line
 	4800 6700 4750 6700
 Wire Wire Line
 	4750 6700 4750 6500
@@ -1314,11 +1310,8 @@ $EndComp
 Wire Wire Line
 	4800 7600 4800 7500
 Wire Wire Line
-	4800 7500 3750 7500
+	4800 7500 4350 7500
 Connection ~ 4800 7500
-Connection ~ 3750 7500
-Wire Wire Line
-	3750 7500 3750 7000
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 63FBD6BB
@@ -1446,4 +1439,13 @@ F 3 "" H 1750 7250 50  0001 C CNN
 	1    1750 7250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3650 7000 4800 7000
+Wire Wire Line
+	4800 7200 4350 7200
+Wire Wire Line
+	4350 7200 4350 7500
+Connection ~ 4350 7500
+Wire Wire Line
+	4350 7500 3750 7500
 $EndSCHEMATC
